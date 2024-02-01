@@ -14,15 +14,25 @@ body {
   font-family: 'Roboto Mono', sans-serif;
   background-color: rgb(14, 14, 14);
   color: #ccc;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   line-height: 1.6;
+  margin: 0;
+}
+
+@media screen and (max-width: 37.5rem) { /* 600px */
+  body {
+    margin: 1.875rem; /* 30px */
+  }
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: var(--text-color);
-  font-size: 50px;
-  letter-spacing: -2px;
-  margin-bottom: 20px;
+  font-size: 3rem; /* 50px */
+  letter-spacing: -0.125rem; /* -2px */
+  margin-bottom: 1.25rem; /* 20px */
 }
 
 h2 {
@@ -30,7 +40,7 @@ h2 {
 }
 
 h3 {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem; /* 10px */
 }
 
 ul {
@@ -43,17 +53,36 @@ a {
 }
 
 p {
-  margin: 20px 0;
+  margin: 1.25rem 0; /* 20px */
 }
 
 nav {
-  width: 30%;
+  width: 30vw;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 1rem;
   align-items: center;
+}
+
+@media screen and (max-width: 37.5rem) { /* 600px */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .cursor {
+    display: inline;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  table {
+    max-width: 100%; /* Ajuste para móviles */
+  }
 }
 
 nav ul li {
@@ -62,7 +91,7 @@ nav ul li {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 37.5rem; /* 600px */
   margin: auto;
   height: 70vh;
   display: flex;
@@ -73,7 +102,7 @@ nav ul li {
 
 .wb-body {
   background: rgb(37, 37, 37);
-  padding: 20px;
+  padding: 1.25rem; /* 20px */
 }
 
 .hidden {
@@ -81,8 +110,12 @@ nav ul li {
 }
 
 .cursor {
-  font-weight: 700;
+  margin-left: 0.5rem;
+  font-weight: 660;
   animation: 1s blink step-end infinite;
+  font-size: inherit;
+  vertical-align: middle;
+  transform: translateY(-6%);
 }
 
 @keyframes blink {
@@ -110,7 +143,7 @@ nav ul li {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  height: 0.125rem; /* 2px */
   background-color: rgb(255, 255, 255);
   transform-origin: bottom right;
   transform: scaleX(0);
@@ -120,4 +153,26 @@ nav ul li {
 .underline:hover::before {
   transform-origin: bottom left;
   transform: scaleX(1);
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+table td:first-child {
+  text-align: left;
+  padding-left: 0.125rem;
+  color: #FFFFFF;
+}
+
+table td:last-child {
+  text-align: right;
+  padding-right: 0.75rem;
+}
+
+.fab {
+  font-size: 1rem;
+  margin-right: 0.25rem;
 }
