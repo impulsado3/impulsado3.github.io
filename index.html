@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBT Boxing - Apoya el Boxeo</title>
+    <link rel="icon" type="image/png" href="assets/logo_white.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Teko:wght@400;600;700&family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero" id="inicio">
+        <!-- Imagen de fondo (se muestra cuando no hay directo) -->
+        <div id="hero-background" class="hero-background"></div>
+        
+        <!-- Twitch Embed (se muestra solo si está en directo) -->
+        <div id="twitch-embed" class="hero-stream"></div>
+        
+        <nav class="navbar">
+            <a href="#inicio" class="logo">
+                <img src="assets/logo_red.png" alt="TBT Logo" style="height: 60px;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#donar" class="btn-nav">DONAR</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <img src="assets/logo_white.png" alt="TBT Logo" class="hero-logo">
+            <p class="tagline">Txonda, Gràcia, 08023 Barcelona</p>
+            <div class="hero-subtitle">Txonda Boxing Tornament</div>
+            <a href="https://twitch.tv/impulsado" target="_blank" class="btn-hero">VER EN DIRECTO</a>
+        </div>
+    </header>
+
+    <!-- Sección de Donación -->
+    <section id="donar" class="donate-section">
+        <div class="container">
+            <div class="donate-header">
+                <h2>MANTÉN VIVO EL RING</h2>
+                <p class="donate-subtitle">Tu apoyo hace posible que sigamos entrenando campeones</p>
+            </div>
+            
+            <div class="donation-options">
+                <div class="donation-card">
+                    <div class="amount">1€</div>
+                    <p class="donation-desc">Una venda nueva</p>
+                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                        <input type="hidden" name="business" value="elpaubru@gmail.com">
+                        <input type="hidden" name="amount" value="1">
+                        <input type="hidden" name="currency_code" value="EUR">
+                        <input type="hidden" name="item_name" value="Donación TBT Boxing - 1€">
+                        <button type="submit" class="btn-donate">APOYAR</button>
+                    </form>
+                </div>
+
+                <div class="donation-card featured">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="amount">2€</div>
+                    <p class="donation-desc">Paga la luz 1 día</p>
+                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                        <input type="hidden" name="business" value="elpaubru@gmail.com">
+                        <input type="hidden" name="amount" value="2">
+                        <input type="hidden" name="currency_code" value="EUR">
+                        <input type="hidden" name="item_name" value="Donación TBT Boxing - 2€">
+                        <button type="submit" class="btn-donate btn-featured">APOYAR</button>
+                    </form>
+                </div>
+
+                <div class="donation-card">
+                    <div class="amount">5€</div>
+                    <p class="donation-desc">Guantes de sparring</p>
+                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                        <input type="hidden" name="business" value="elpaubru@gmail.com">
+                        <input type="hidden" name="amount" value="5">
+                        <input type="hidden" name="currency_code" value="EUR">
+                        <input type="hidden" name="item_name" value="Donación TBT Boxing - 5€">
+                        <button type="submit" class="btn-donate">APOYAR</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="payment-info">
+                <div class="secure-badge">
+                    <img src="assets/shield-check.svg" alt="Seguro" width="18" height="18">
+                    <span>Pago seguro con PayPal</span>
+                </div>
+                <p class="payment-note">Encriptación SSL · Tarjetas de crédito/débito · Sin cuenta necesaria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo_white.png" alt="TBT Logo" style="height: 60px; margin-bottom: 15px;">
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/impulsado" target="_blank" class="social-icon" title="Instagram">
+                        <img src="assets/instagram.svg" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="https://twitch.tv/impulsado" target="_blank" class="social-icon" title="Twitch">
+                        <img src="assets/twitch.svg" alt="Twitch" width="24" height="24">
+                    </a>
+                </div>
+                <p class="footer-copy">&copy; 2026 TBT Boxing. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Twitch Embed Library -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
