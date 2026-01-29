@@ -34,16 +34,18 @@ function initCountdown() {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-        if (days > 1) {
-            // Mostrar días restantes
-            countdownButton.innerHTML = days + ' días restantes';
-        } else {
-            // Mostrar formato HH:MM:SS
+        if (distance >= 1000 * 60 * 60 * 24) 
+        {
+            countdownButton.innerHTML = `${days} día${days !== 1 ? 's' : ''} restantes`;
+        } 
+        else 
+        {
             const hoursStr = String(hours).padStart(2, '0');
             const minutesStr = String(minutes).padStart(2, '0');
             const secondsStr = String(seconds).padStart(2, '0');
-            countdownButton.innerHTML = hoursStr + ':' + minutesStr + ':' + secondsStr;
+            countdownButton.innerHTML = `${hoursStr}:${minutesStr}:${secondsStr}`;
         }
+
     }
     
     // Actualizar inmediatamente
