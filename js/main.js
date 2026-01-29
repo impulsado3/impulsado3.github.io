@@ -4,7 +4,7 @@
 function initCountdown() {
     const countdownButton = document.getElementById('countdown-button');
     const donateSection = document.getElementById('donar');
-    const targetDate = new Date('2026-01-30T21:00:00').getTime();
+    const targetDate = new Date('2026-01-30T22:00:00Z').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
